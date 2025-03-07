@@ -103,24 +103,25 @@ $$= \frac{A \omega}{s^2 + \omega^2}$$
 
 # Algunas demostraciones
 
-$$F(s) = \int_{0}^{\infty} f(t) e^{-s t} \, dt$$
+$$F(s) = \int_{0}^{\infty} f(t) \cdot e^{-st} \, dt$$
 
-$$\mathcal{L} ( f'(t) ) = \int_{0}^{\infty} f'(t) e^{-s t} \, dt$$
+$$\mathcal{L}\{f'(t)\} = \int_{0}^{\infty} f'(t) \cdot e^{-st} \, dt$$
 
-$$\mathcal{L} ( f'(t) ) = \Big[ uv \Big]_{0}^{\infty} - \int_{0}^{\infty} v \, du$$
+$$\mathcal{L}\{f'(t)\} = \left. uv \right|_{0}^{\infty} - \int_{0}^{\infty} v \, du$$
 
-$$\mathcal{L} ( f'(t) ) = \Big[ e^{-s t} f(t) \Big]_{0}^{\infty} - \int_{0}^{\infty} (-s e^{-s t} f(t)) \, dt$$
+$$\mathcal{L}\{f'(t)\} = \left. e^{-st} f(t) \right|_{0}^{\infty} - \int_{0}^{\infty} -se^{-st} f(t) \, dt$$
 
-$$\mathcal{L} ( f'(t) ) = -f(0) + s \int_{0}^{\infty} e^{-s t} f(t) \, dt$$
+$$\mathcal{L}\{f'(t)\} = -f(0) + s \int_{0}^{\infty} e^{-st} f(t) \, dt$$
 
-$$\mathcal{L} ( f'(t) ) = -f(0) + sF(s)$$
-
----
+$$\mathcal{L}\{f'(t)\} = -f(0) + sF(s)$$
 
 **Definiciones usadas:**
 
-$$u = e^{-s t}, \quad du = -s e^{-s t}$$  
+$$u = e^{-st}, \quad du = -se^{-st}$$
+
 $$v = f(t), \quad dv = f'(t)$$
+
+
 
 
 
