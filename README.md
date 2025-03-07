@@ -65,5 +65,71 @@ $$= \frac{A}{s} \int_0^{\infty} e^{-st} dt = \frac{A}{s^2}$$
 
 Figura 2. Fución rampa
 
+# Transformada función senoidal
+
+Las transformaciones de una función senoidal son cambios que se le aplican a la gráfica de la función en el plano cartesiano. Estas transformaciones pueden incluir desplazamientos, expansiones o compresiones.
+
+$$f(t) =
+\begin{cases}
+0, & \text{para } t < 0 \\
+A sen(\omega t), & \text{para } t \geq 0
+\end{cases}$$
+
+$$sen(\omega t) = \frac{1}{2j} \left( e^{j\omega t} - e^{-j\omega t} \right)$$
+
+$$\mathcal{L} [ A sen(\omega t)] = \frac{A}{2j} \int_{0}^{\infty} \left( e^{j\omega t} - e^{-j\omega t} \right) e^{-st} dt$$
+
+$$= \frac{A}{2j} \left( \frac{1}{s - j\omega} - \frac{1}{s + j\omega} \right)$$
+
+$$= \frac{A \omega}{s^2 + \omega^2}$$
+
+# Transformada de LaPlace
+
+- **Transformada de una función:**
+
+  $$\mathcal{L} ( f(t) ) = F(s)$$
+
+- **Transformada de la derivada:**
+
+  $$\mathcal{L} ( f'(t) ) = sF(s) - f(0)$$
+
+  $$\mathcal{L} ( f''(t) ) = s^2 F(s) - s f(0) - f'(0)$$
+
+  $$\mathcal{L} ( f^n(t) ) = s^n F(s) - s^{n-1} f(0) - \dots - s f^{n-1}(0) - f^n(0)$$
+
+- **Transformada de la integral**
+
+  $$\mathcal{L} \left( \int f(t) dt \right) = \frac{1}{s} F(s)$$
+
+# Algunas demostraciones
+
+$$F(s) = \int_{0}^{\infty} f(t) e^{-s t} \, dt$$
+
+$$\mathcal{L} ( f'(t) ) = \int_{0}^{\infty} f'(t) e^{-s t} \, dt$$
+
+$$\mathcal{L} ( f'(t) ) = \Big[ uv \Big]_{0}^{\infty} - \int_{0}^{\infty} v \, du$$
+
+$$\mathcal{L} ( f'(t) ) = \Big[ e^{-s t} f(t) \Big]_{0}^{\infty} - \int_{0}^{\infty} (-s e^{-s t} f(t)) \, dt$$
+
+$$\mathcal{L} ( f'(t) ) = -f(0) + s \int_{0}^{\infty} e^{-s t} f(t) \, dt$$
+
+$$\mathcal{L} ( f'(t) ) = -f(0) + sF(s)$$
+
+---
+
+**Definiciones usadas:**
+
+$$u = e^{-s t}, \quad du = -s e^{-s t}$$  
+$$v = f(t), \quad dv = f'(t)$$
+
+
+
+
+
+
+
+
+
+
 
 
