@@ -175,86 +175,143 @@ $$\mathcal{L}^{-1} \left( \frac{s}{s^2 + 9} \right) = \cos(3t).$$
 
 ### 8.1 Caso 1: \( Q(s) \) tiene raíces reales distintas
 
-- Sea la función:
+###  Sea la función:
 
 $$ G(s) = \frac{P(s)}{Q(s)} = \frac{P(s)}{(s + p_1)(s + p_2) \dots (s + p_n)} $$
 
 ---
 
-### **Forma de la descomposición en fracciones parciales**
+- Forma de la descomposición en fracciones parciales
 
-# La descomposición en fracciones parciales se expresa como:
+- La descomposición en fracciones parciales se expresa como:
 
 $$ G(s) = \frac{A}{(s + p_1)} + \frac{B}{(s + p_2)} + \dots + \frac{N}{(s + p_n)} $$
 
----
 
-###  **Coeficientes a determinar**
+
+- **Coeficientes a determinar**
 Donde \( A, B, \dots, N \) son coeficientes por determinar.
 
-###  **Descomposición en fracciones parciales**
+-  **Descomposición en fracciones parciales**
 
 ## 💡 **Ejercicio:**  
-# Obtenga la transformada inversa de:
+- Obtenga la transformada inversa de:
 
 $$ G(s) = \frac{2s^2 - 4}{(s + 1)(s - 2)(s - 3)} $$
 
-## 8.2 **Descomposición en fracciones parciales**
+$$\frac{2s^2 - 4}{(s+1)(s-2)(s-3)} = \frac{A}{s+1} + \frac{B}{s-2} + \frac{C}{s-3}$$
 
-##  Caso 2: \( Q(s) \) tiene \( n \) raíces reales repetidas  
+$$2s^2 - 4 = A(s - 2)(s - 3) + B(s + 1)(s - 3) + C(s + 1)(s - 2)$$
 
-Sea la función:
+$$A = -\frac{1}{6}, \quad B = -\frac{4}{3}, \quad C = \frac{7}{2}$$
+
+$$G(s) = \frac{-1}{6(s+1)} + \frac{-4}{3(s-2)} + \frac{7}{2(s-3)}$$
+
+$$\mathcal{L}^{-1} \big(G(s)\big) = -\frac{1}{6} e^{-t} - \frac{4}{3} e^{2t} + \frac{7}{2} e^{3t}$$
+
+## 8.2 Caso 2: \( Q(s) \) tiene \( n \) raíces reales repetidas  
+
+### Sea la función:
 
 $$ G(s) = \frac{P(s)}{Q(s)} = \frac{P(s)}{(s + p)^n} $$
 
 ---
+## **Forma de la descomposición en fracciones parciales**
 
-## 🔹 **Forma de la descomposición en fracciones parciales**
-
-La descomposición en fracciones parciales se expresa como:
+- La descomposición en fracciones parciales se expresa como:
 
 $$ G(s) = \frac{A}{(s + p)} + \frac{B}{(s + p)^2} + \dots + \frac{N}{(s + p)^n} $$
 
 ---
 
-## 🔹 **Coeficientes a determinar**
-Donde \( A, B, \dots, N \) son coeficientes por determinar.
+-  **Coeficientes a determinar**
+- Donde $$\( A, B, \dots, N \)$$ son coeficientes por determinar.
 
-# **Descomposición en fracciones parciales**
 
-## 🔹 **Ejercicio:**  
-Obtenga la transformada inversa de:
+## 💡 **Ejercicio:**  
+- Obtenga la transformada inversa de:
 
 $$ G(s) = \frac{2s^2 + 6s + 5}{(s + 2)(s + 1)^2} $$
 
-# **Descomposición en fracciones parciales**
+$$\frac{2s^2 + 6s + 5}{(s+2)(s+1)^2} = \frac{A}{s+2} + \frac{B}{s+1} + \frac{C}{(s+1)^2}$$
 
-## 🔹 Caso 3: \( Q(s) \) tiene raíces complejas conjugadas  
+$$2s^2 + 6s + 5 = A(s+1)^2 + B(s+2)(s+1) + C(s+2)$$
 
-Sea la función:
+$$(A + B)s^2 + (2A + 3B + C)s + (A + 2B + 2C) = 2s^2 + 6s + 5$$
+
+$$A + B = 2$$
+
+$$2A + 3B + C = 6$$
+
+$$A + 2B + 2C = 5$$
+
+> ### Resolviendo el sistema:
+
+$$A = 1, \quad B = 1, \quad C = 1$$
+
+$$G(s) = \frac{1}{s+2} + \frac{1}{s+1} + \frac{1}{(s+1)^2}$$
+
+> ### Aplicando la transformada inversa de Laplace:
+
+$$\mathcal{L}^{-1}(G(s)) = e^{-2t} + e^{-t} + t e^{-t}$$
+
+## 8.3 Caso 3: \( Q(s) \) tiene raíces complejas conjugadas  
+
+### Sea la función:
 
 $$ G(s) = \frac{P(s)}{Q(s)} = \frac{P(S)}{(s^2 + b_1 s + c_1)(s^2 + b_2 s + c_2) \dots (s^2 + b_n s + c_n)} $$
 
 ---
 
-## 🔹 **Forma de la descomposición en fracciones parciales**
+-  **Forma de la descomposición en fracciones parciales**
 
-La descomposición en fracciones parciales se expresa como:
+- La descomposición en fracciones parciales se expresa como:
 
 $$ G(s) = \frac{A s + B}{(s^2 + b_1 s + c_1)} + \frac{C s + D}{(s^2 + b_2 s + c_2)} + \dots + \frac{M s + N}{(s^2 + b_n s + c_n)} $$
 
 ---
 
-## 🔹 **Coeficientes a determinar**
+-  **Coeficientes a determinar**
 Donde \( A, B, \dots, N \) son coeficientes por determinar.
 
-# **Descomposición en fracciones parciales**
+- **Descomposición en fracciones parciales**
 
-## 🔹 **Ejercicio:**  
-Obtenga la transformada inversa de:
+💡 **Ejercicio:**  
+## Obtenga la transformada inversa de:
 
 $$ G(s) = \frac{s^2 + 2s + 3}{(s^2 + 2s + 2)(s^2 + 2s + 5)} $$
 
+$$\frac{s^2 + 2s + 3}{(s^2 + 2s + 2)(s^2 + 2s + 5)} = \frac{As + B}{s^2 + 2s + 2} + \frac{Cs + D}{s^2 + 2s + 5}$$
+
+$$(A + C)s^3 + (2A + B + 2C + D)s^2 + (5A + 2B + 2C + 2D)s + (5B + 2D) = s^2 + 2s + 3$$
+
+- Igualando coeficientes:
+
+$$A + C = 0$$
+
+$$2A + B + 2C + D = 1$$
+
+$$5A + 2B + 2C + 2D = 2$$
+
+$$5B + 2D = 3$$
+
+- Resolviendo el sistema de ecuaciones
+
+$$A = 0, \quad B = \frac{1}{3}, \quad C = 0, \quad D = \frac{2}{3}$$
+
+$$G(s) = \frac{1/3}{s^2 + 2s + 2} + \frac{2/3}{s^2 + 2s + 5}$$
+
+- Reescribiendo los denominadores:
+
+$$s^2 + 2s + 2 = (s+1)^2 + 1$$
+
+$$s^2 + 2s + 5 = (s+1)^2 + 4$$
+
+$$\mathcal{L}^{-1} \left( \frac{1/3}{(s+1)^2 + 1} \right) = \frac{1}{3} e^{-t} \sin(t)$$
+
+$$\mathcal{L}^{-1} \left( \frac{2/3}{(s+1)^2 + 4} \right) = \frac{1}{3} e^{-t} \sin(2t)$$
+
+$$g(t) = \frac{1}{3} e^{-t} \sin(t) + \frac{1}{3} e^{-t} \sin(2t)$$
 
 
 
