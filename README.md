@@ -65,9 +65,9 @@ $$= \frac{A}{s} \int_0^{\infty} e^{-st} dt = \frac{A}{s^2}$$
 
 Figura 2. Fución rampa
 
-# Transformada función senoidal
+## 4. Transformada función senoidal
 
-Las transformaciones de una función senoidal son cambios que se le aplican a la gráfica de la función en el plano cartesiano. Estas transformaciones pueden incluir desplazamientos, expansiones o compresiones.
+> 🔑 Las transformaciones de una función senoidal son cambios que se le aplican a la gráfica de la función en el plano cartesiano. Estas transformaciones pueden incluir desplazamientos, expansiones o compresiones.
 
 $$f(t) =
 \begin{cases}
@@ -83,13 +83,13 @@ $$= \frac{A}{2j} \left( \frac{1}{s - j\omega} - \frac{1}{s + j\omega} \right)$$
 
 $$= \frac{A \omega}{s^2 + \omega^2}$$
 
-# Transformada de LaPlace
+## 5 Transformada de LaPlace
 
-- **Transformada de una función:**
+### 5.1 **Transformada de una función:**
 
   $$\mathcal{L} ( f(t) ) = F(s)$$
 
-- **Transformada de la derivada:**
+### 5.2 **Transformada de la derivada:**
 
   $$\mathcal{L} ( f'(t) ) = sF(s) - f(0)$$
 
@@ -97,11 +97,11 @@ $$= \frac{A \omega}{s^2 + \omega^2}$$
 
   $$\mathcal{L} ( f^n(t) ) = s^n F(s) - s^{n-1} f(0) - \dots - s f^{n-1}(0) - f^n(0)$$
 
-- **Transformada de la integral**
+### 5.3 Transformada de la integral
 
   $$\mathcal{L} \left( \int f(t) dt \right) = \frac{1}{s} F(s)$$
 
-# Algunas demostraciones
+## 6. Algunas demostraciones
 
 $$F(s) = \int_{0}^{\infty} f(t) e^{-s t} dt$$
 
@@ -117,13 +117,13 @@ $$\mathcal{L} \{ f'(t) \} = -f(0) + sF(s)$$
 
 ---
 
-**Definiciones usadas:**
+### 6.1 Definiciones usadas:
 
 $$u = e^{-s t}, \quad du = -s e^{-s t}$$  
 
 $$v = f(t), \quad dv = f'(t)$$
 
-# Definición de la Transformada Inversa de Laplace
+## 7. Definición de la Transformada Inversa de Laplace
 
 En la Sección 8.1 definimos la transformación de Laplace de \( f \) por:
 
@@ -134,8 +134,8 @@ También diremos que \( f \) es una *transformación inversa de Laplace* de \( F
 $$f = \mathcal{L}^{-1} (F).$$
 
 Para resolver ecuaciones diferenciales con la transformada de Laplace, debemos ser capaces de obtener \( f \) a partir de su transformación \( F \).
-Hay una fórmula para hacer esto, pero **no podemos usarla directamente** porque requiere teoría de funciones de una variable compleja.  
-Afortunadamente, podemos usar **la tabla de transformadas de Laplace** para encontrar transformaciones inversas necesarias.
+Hay una fórmula para hacer esto, pero no podemos usarla directamente porque requiere teoría de funciones de una variable compleja.  
+Afortunadamente, podemos usar la tabla de transformadas de Laplace para encontrar transformaciones inversas necesarias.
 
 ---
 
@@ -171,37 +171,37 @@ Esto muestra que:
 
 $$\mathcal{L}^{-1} \left( \frac{s}{s^2 + 9} \right) = \cos(3t).$$
 
-# **Descomposición en fracciones parciales**
+## 8. **Descomposición en fracciones parciales**
 
-## 🔹 Caso 1: \( Q(s) \) tiene raíces reales distintas
+### 8.1 Caso 1: \( Q(s) \) tiene raíces reales distintas
 
-Sea la función:
+- Sea la función:
 
 $$ G(s) = \frac{P(s)}{Q(s)} = \frac{P(s)}{(s + p_1)(s + p_2) \dots (s + p_n)} $$
 
 ---
 
-## 🔹 **Forma de la descomposición en fracciones parciales**
+### **Forma de la descomposición en fracciones parciales**
 
-La descomposición en fracciones parciales se expresa como:
+# La descomposición en fracciones parciales se expresa como:
 
 $$ G(s) = \frac{A}{(s + p_1)} + \frac{B}{(s + p_2)} + \dots + \frac{N}{(s + p_n)} $$
 
 ---
 
-## 🔹 **Coeficientes a determinar**
+###  **Coeficientes a determinar**
 Donde \( A, B, \dots, N \) son coeficientes por determinar.
 
-# **Descomposición en fracciones parciales**
+###  **Descomposición en fracciones parciales**
 
-## 🔹 **Ejercicio:**  
-Obtenga la transformada inversa de:
+## 💡 **Ejercicio:**  
+# Obtenga la transformada inversa de:
 
 $$ G(s) = \frac{2s^2 - 4}{(s + 1)(s - 2)(s - 3)} $$
 
-# **Descomposición en fracciones parciales**
+## 8.2 **Descomposición en fracciones parciales**
 
-## 🔹 Caso 2: \( Q(s) \) tiene \( n \) raíces reales repetidas  
+##  Caso 2: \( Q(s) \) tiene \( n \) raíces reales repetidas  
 
 Sea la función:
 
