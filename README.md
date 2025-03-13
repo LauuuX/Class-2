@@ -194,7 +194,7 @@ Donde \( A, B, \dots, N \) son coeficientes por determinar.
 
 -  **Descomposición en fracciones parciales**
 
-## 💡 **Ejercicio:**  
+## 💡 **Ejercicio 1:**  
 - Obtenga la transformada inversa de:
 
 $$ G(s) = \frac{2s^2 - 4}{(s + 1)(s - 2)(s - 3)} $$
@@ -228,7 +228,7 @@ $$ G(s) = \frac{A}{(s + p)} + \frac{B}{(s + p)^2} + \dots + \frac{N}{(s + p)^n} 
 - Donde $$\( A, B, \dots, N \)$$ son coeficientes por determinar.
 
 
-## 💡 **Ejercicio:**  
+## 💡 **Ejercicio 2:**  
 - Obtenga la transformada inversa de:
 
 $$ G(s) = \frac{2s^2 + 6s + 5}{(s + 2)(s + 1)^2} $$
